@@ -23,15 +23,14 @@ const headJSX = (participants) => {
   if (! Array.isArray(participants) ) {
     return <>prazno</>;
   }
-  return participants?.map((partic) => {
-    return (
+  return (
       <tr>
-        {Object.entries(partic).map(
-          (el) => notToDisplay.indexOf(el[0]) && <th>{el[0]}</th>
+        {Object.entries(participants[0]).map(
+          (el) => notToDisplay.indexOf(el[0])  && <th>{el[0]}</th>
         )}
       </tr>
     );
-  });
+  
 };
 
 const renderTable = (data) => {
@@ -39,8 +38,7 @@ const renderTable = (data) => {
 
 
   let headJ = headJSX(data);
-  let bodJ = "";
-  //bodyJSX(data);
+  let bodJ =  bodyJSX(data);
 
   return (
     <table>
@@ -53,7 +51,7 @@ const renderTable = (data) => {
 export default function Participants() {
   let paricArr = [];
 
-  const signIn = async () => {
+  const getParticipants = async () => {
     "use server";
 
     const supabase = createClient();
@@ -64,21 +62,17 @@ export default function Participants() {
 
     //console.log(participants)
 
-    return participants;
+    return renderTable(participants);
 
     // participants?.length  ?  participants?.then((d)=> {
     //   renderTable(d);
     // }) : [] ;
   };
 
-  let resp = signIn();
+  let resp = getParticipants();
 
   // const resp1  = Array.isArray(resp)? resp: [];
 
-  // console.log(resp)
-  if (resp?.length > 0) {
-    renderTable(resp);
-  }
 
-  return <div>{renderTable(resp)}</div>;
+  return <div>{(resp)}</div>;
 }
