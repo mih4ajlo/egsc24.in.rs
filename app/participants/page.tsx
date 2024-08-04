@@ -7,22 +7,47 @@ import { redirect } from "next/navigation";
 
 export default function Participants() {
 
+    let paricArr = [];
 
     const signIn = async () => {
         "use server";
     
         const supabase = createClient();
     
-        const { data: notes } = await supabase.from("main_participants").select();
+        const { data: participants } = await supabase.from("main_participants").select();
 
-        return <pre>{JSON.stringify(notes, null, 2)}</pre>
+
+        const notToDisplay = ['created_at', 'id', 'e_mail']
+
+        return (participants
+           && participants?.map((partic:Array<any>   ) => {
+                return (<tr>
+                  {  
+                    ( Object.entries(partic).map(el=>
+                      notToDisplay.indexOf(el[0]) &&  (<td>{el[1]}</td>))
+          
+                   ) 
+                }
+                </tr>)
+              })
+        ) ;
       };
 
-    const data =  signIn();
+
+      let partArr:  any = signIn();
+     
+
+      
 
   return (
     <div>
-      {data}
+      <table>
+        <thead></thead>
+        <tbody>
+         {partArr }
+        </tbody>
+      </table>
+      
     </div>
   )
 }

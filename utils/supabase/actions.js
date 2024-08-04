@@ -14,8 +14,6 @@ export async function registerForOpen(formData) {
         .insert(formData);
 
 
-    console.log('first', data)
-
     return data;
 }
 
@@ -25,24 +23,12 @@ export async  function insertData(passedObj)  {
     //console.log('first', data.status == 201 && !data.error, data)
     
 
-
     const supabase = createClient();
 
     const  data = 
         await supabase.from("main_participants")
         .insert(passedObj);
 
-    // try {
-    //     await sql`
-    //       DELETE FROM todos
-    //       WHERE id = ${data.id};
-    //     `;
-    
-    //     revalidatePath("/");
-    //     return { message: `Deleted todo ${data.todo}` };
-    //   } catch (e) {
-    //     return { message: "Failed to delete todo" };
-    //   }
 
     return data;
 };

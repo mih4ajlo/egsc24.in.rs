@@ -5,6 +5,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+
+    screens: {
+      '3xl': '1600px',
+      '2k': '2500px',
+    },
+
     extend: {
       colors: {
         background: "hsl(var(--background))",
