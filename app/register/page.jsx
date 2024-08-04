@@ -9,8 +9,6 @@ const Register = () => {
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
 
-    console.log(name, value)
-
     setFormData((prevData) => ({
       ...prevData,
       [name]: type === "checkbox" ? checked : value,
