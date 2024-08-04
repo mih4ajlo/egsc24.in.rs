@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { insertData } from "../../utils/supabase/actions";
+import { registerForOpen } from "../../../utils/supabase/actions";
 
-const Register = () => {
+const RegisterOpen = () => {
   const [formData, setFormData] = useState({});
 
   const handleChange = (e) => {
@@ -19,7 +19,7 @@ const Register = () => {
     e.preventDefault();
     console.log(formData);
 
-    insertData( formData );
+    registerForOpen( formData );
   };
 
   return (
@@ -75,38 +75,16 @@ const Register = () => {
         />
       </div>
       <div>
-        <label htmlFor="faculty">{"Faculty"}</label>
+        <label htmlFor="Club">{"Club"}</label>
         <input
           type="text"
-          id="faculty"
-          name="faculty"
+          id="club"
+          name="club"
           onChange={handleChange}
           required
         />
       </div>
-      <div>
-        <label htmlFor="university">{"University"}</label>
-        <input
-          type="text"
-          id="university"
-          name="university"
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="level_of_studies">{"Level of studies"}</label>
-        <select
-          id="level_of_studies"
-          name="degree"
-          onChange={handleChange}
-          required
-        >
-          <option value="BS">BS</option>
-          <option value="MS">MS</option>
-          <option value="PHD">PHD</option>
-        </select>
-      </div>
+      
       <div>
         <label htmlFor="country">{"Country"}</label>
         <input
@@ -122,4 +100,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default RegisterOpen;
