@@ -1,9 +1,5 @@
 import React from "react";
-import Link from "next/link";
-import { headers } from "next/headers";
 import { createClient } from "@/utils/supabase/server";
-import { redirect } from "next/navigation";
-import { isArray } from "util";
 
 const notToDisplay = ["created_at", "id", "e_mail"];
 
@@ -12,7 +8,7 @@ const bodyJSX = (participants) =>
     return (
       <tr>
         {Object.entries(partic).map(
-          (el) => notToDisplay.indexOf(el[0]) && <td>{el[1]}</td>
+          (el) => {return notToDisplay.indexOf(el[0]) == -1 ? (<td>{el[1]}</td>) : null}
         )}
       </tr>
     );
@@ -26,7 +22,7 @@ const headJSX = (participants) => {
   return (
       <tr>
         {Object.entries(participants[0]).map(
-          (el) => notToDisplay.indexOf(el[0])  && <th>{el[0]}</th>
+          (el) => {return notToDisplay.indexOf(el[0]) == -1 ? (<td>{el[0]}</td>) : null}
         )}
       </tr>
     );
@@ -34,7 +30,6 @@ const headJSX = (participants) => {
 };
 
 const renderTable = (data) => {
-  console.log("first", data);
 
 
   let headJ = headJSX(data);
@@ -60,18 +55,13 @@ export default function Participants() {
       .from("main_participants")
       .select();
 
-    //console.log(participants)
 
     return renderTable(participants);
 
-    // participants?.length  ?  participants?.then((d)=> {
-    //   renderTable(d);
-    // }) : [] ;
   };
 
   let resp = getParticipants();
 
-  // const resp1  = Array.isArray(resp)? resp: [];
 
 
   return <div>{(resp)}</div>;
