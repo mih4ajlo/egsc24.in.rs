@@ -5,6 +5,7 @@ import GossSVG from "../public/GoSS_logo.svg";
 
 import trgPic from "../public/slike/trg.webp";
 import centarPic from "../public/slike/centar.jpg";
+import GoPic from "../public/slike/go_tabla.jpg";
 import Link from "next/link";
 import classes from "./header.module.css";
 
@@ -17,29 +18,37 @@ export default function Header() {
         {/* <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
           <Image src={GossSVG} alt="asd" width={200} height={200} />
         </a> */}
-        <Image src={trgPic} alt="asd" width={800}   className={classes.mask}/>
+        <div className="relative">
+          <Image
+            src={trgPic}
+            alt="asd"
+            width={800}
+            className={`${classes.mask} `}
+          />
+          <Image
+            src={GoPic}
+            alt="asd"
+            width={800}
+            className={` ${classes.maskOverlap}`}
+          />
+        </div>
       </div>
-
-      
 
       {/* <Image src={centarPic} alt="asd" width={1200} height={400} className={classes.mask} /> */}
       <h1 className="sr-only">European Go Student Championship 2024 page</h1>
-      
-        <div className="text-2xl  lg:text-4xl !leading-tight mx-auto w-[70rem] text-center">
-          <p className="text-3xl font-bold mb-4">European Go Student Championship 2024</p> 
-          
-           and
-          
-          <p className="mt-4">
+
+      <div className="text-2xl  lg:text-4xl !leading-tight mx-auto w-[70rem] text-center">
+        <p className="text-3xl font-bold mb-4">
+          European Go Student Championship 2024
+        </p>
+        and
+        <p className="mt-4">
           <Link href={"/nsOpen"} className="underline ">
             {" "}
             Novi Sad Open - 1st edition
           </Link>
-          </p>
-        
-        </div>
-        
-      
+        </p>
+      </div>
 
       <div className="w-full p-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent my-8" />
     </div>

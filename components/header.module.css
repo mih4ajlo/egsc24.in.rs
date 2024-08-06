@@ -1,3 +1,13 @@
 .mask {
+    
     mask-image: url('/alpha-mask.png');
+}
+
+.maskOverlap {
+    content: url('/slike/go_tabla.jpg');
+    position: absolute;
+    opacity: .85;
+    clip-path: circle(95px at center);
+    bottom: 0;
+    
 }
