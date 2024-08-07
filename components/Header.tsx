@@ -37,7 +37,7 @@ export default function Header() {
       {/* <Image src={centarPic} alt="asd" width={1200} height={400} className={classes.mask} /> */}
       <h1 className="sr-only">European Go Student Championship 2024 page</h1>
 
-      <div className="text-2xl  lg:text-4xl !leading-tight mx-auto w-[70rem] text-center">
+      <div className="text-2xl  lg:text-4xl !leading-tight mx-auto max-w-[70rem] text-center">
         <p className="text-3xl font-bold mb-4">
           European Go Student Championship 2024
         </p>
@@ -50,7 +50,7 @@ export default function Header() {
         </p>
       </div>
 
-      <div className="w-full p-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent my-8" />
+      <div className="w-full p-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent my-2" />
     </div>
   );
 }

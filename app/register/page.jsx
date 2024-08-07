@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { insertData } from "../../utils/supabase/actions";
+import classes from './register.module.css';
 
 const Register = () => {
   const [formData, setFormData] = useState({});
@@ -23,8 +24,8 @@ const Register = () => {
   };
 
   return (
-    <form className="w-full flex flex-col gap-4 my-8" onSubmit={handleSubmit}>
-      <div className="grid grid-cols-2 gap-2 w-2/3">
+    <form className=" flex flex-col gap-4 my-8 sm:mx-4 mx-auto" onSubmit={handleSubmit}>
+      <div className={classes.row}>
         <label htmlFor="e_mail">{"E-mail"}</label>
         <input
           type="text"
@@ -34,7 +35,7 @@ const Register = () => {
           required
         />
       </div>
-      <div className="grid grid-cols-2 gap-2 w-2/3">
+      <div className={classes.row}>
         <label htmlFor="first_name">{"First name"}</label>
         <input
           type="text"
@@ -44,7 +45,7 @@ const Register = () => {
           required
         />
       </div>
-      <div className="grid grid-cols-2 gap-2 w-2/3">
+      <div className={classes.row}>
         <label htmlFor="last_name">{"Last name"}</label>
         <input
           type="text"
@@ -54,7 +55,7 @@ const Register = () => {
           required
         />
       </div>
-      <div className="grid grid-cols-2 gap-2 w-2/3">
+      <div className={classes.row}>
         <label htmlFor="category">{"Go Category"}</label>
         <input
           type="text"
@@ -64,7 +65,7 @@ const Register = () => {
           required
         />
       </div>
-      <div className="grid grid-cols-2 gap-2 w-2/3">
+      <div className={classes.row}>
         <label htmlFor="rating">{"Go Rating"}</label>
         <input
           type="text"
@@ -74,7 +75,7 @@ const Register = () => {
           required
         />
       </div>
-      <div className="grid grid-cols-2 gap-2 w-2/3">
+      <div className={classes.row}>
         <label htmlFor="faculty">{"Faculty"}</label>
         <input
           type="text"
@@ -84,7 +85,7 @@ const Register = () => {
           required
         />
       </div>
-      <div className="grid grid-cols-2 gap-2 w-2/3">
+      <div className={classes.row}>
         <label htmlFor="university">{"University"}</label>
         <input
           type="text"
@@ -94,7 +95,7 @@ const Register = () => {
           required
         />
       </div>
-      <div className="grid grid-cols-2 gap-2 w-2/3 w-max">
+      <div className={classes.row }>
         <label htmlFor="level_of_studies">{"Level of studies"}</label>
         <select
           id="level_of_studies"
@@ -107,7 +108,7 @@ const Register = () => {
           <option value="PHD">PHD</option>
         </select>
       </div>
-      <div className="grid grid-cols-2 gap-2 w-2/3">
+      <div className={classes.row}>
         <label htmlFor="country">{"Country"}</label>
         <input
           type="text"
