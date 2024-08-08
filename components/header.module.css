@@ -7,7 +7,7 @@
     content: url('/slike/go_tabla.jpg');
     position: absolute;
     opacity: .75;
-    clip-path: circle(95px at 65% 50%);
+    clip-path: circle(9.5dvh at 65% 50%);
     bottom: 0;
     left: -15%;
     /* https://bennettfeely.com/clippy/ */
@@ -17,9 +17,12 @@
 
 .header {
     background-color: #fff;
+    display: grid;
+    justify-items: end;
+    grid-template-columns: 15rem 1fr;
     box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
     position: fixed;
-    width: 100%;
+    width: 98vw;
     z-index: 3;
     top: 0;
   }
@@ -45,10 +48,9 @@
   }
   
   .header .logo {
-    display: block;
-    float: left;
+    
     font-size: 2em;
-    padding: 10px 20px;
+    padding: 1rem ;
     text-decoration: none;
   }
   
@@ -65,7 +67,6 @@
   .header .menuIcon {
     cursor: pointer;
     display: inline-block;
-    float: right;
     padding: 28px 20px;
     position: relative;
     user-select: none;

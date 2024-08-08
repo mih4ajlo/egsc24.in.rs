@@ -14,30 +14,32 @@ export default function Menu() {
         <a href="" className={classes.logo}>
           EGSC 2024
         </a>
-        <input className={classes.menuBtn} type="checkbox" id="menuBtn" />
-        <label className={classes.menuIcon} for="menuBtn">
-          <span className={classes.navicon}></span>
-        </label>
-        <ul className={classes.menu}>
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/register">Registration</Link>
-          </li>
-          <li>
-            <Link href="/participants">Participants</Link>
-          </li>
-          <li>
-            <Link href="#">Rules</Link>
-          </li>
-          <li>
-            <Link href="#">Accomodation</Link>
-          </li>
-          <li>
-            <Link href="/nsOpen">NS Open</Link>
-          </li>
-        </ul>
+        <div>
+          <input className={classes.menuBtn} type="checkbox" id="menuBtn" />
+          <label className={classes.menuIcon} for="menuBtn">
+            <span className={classes.navicon}></span>
+          </label>
+          <ul className={classes.menu}>
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/register">Registration</Link>
+            </li>
+            <li>
+              <Link href="/participants">Participants</Link>
+            </li>
+            <li>
+              <Link href="#">Rules</Link>
+            </li>
+            <li>
+              <Link href="#">Accomodation</Link>
+            </li>
+            <li>
+              <Link href="/nsOpen">NS Open</Link>
+            </li>
+          </ul>
+        </div>
       </header>
     </>
   );
