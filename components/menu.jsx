@@ -16,7 +16,7 @@ export default function Menu() {
         </a>
         <div>
           <input className={classes.menuBtn} type="checkbox" id="menuBtn" />
-          <label className={classes.menuIcon} for="menuBtn">
+          <label className={classes.menuIcon} htmlFor="menuBtn">
             <span className={classes.navicon}></span>
           </label>
           <ul className={classes.menu}>

@@ -5,7 +5,7 @@ import Link from "next/link";
 export default async function Index() {
   return (
     <div className="flex-1  flex flex-col gap-20 items-center">
-      <div className="flex-1 flex flex-col gap-20 max-w-4xl px-3">
+      <div className="flex-1 flex flex-col gap-20 w-8/12 max-w-[99vw] px-3">
         
           <p>
             Welcome to Novi Sad, Serbia, for the European Student Championship
@@ -41,7 +41,7 @@ export default async function Index() {
             experience. Welcome to Novi Sad, and let's make these two days of
             competition and camaraderie truly remarkable!
           </p>
-          <div className="w-[50rem] text-center">
+          <div className="w-full flex flex-col justify-center text-center">
             <Link href={"/register"}>
               <h2 className="font-bold text-4xl mb-4">Register</h2>
             </Link>{" "}
