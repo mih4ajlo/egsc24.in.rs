@@ -30,7 +30,7 @@ export default function Menu() {
               <Link href="/participants">Participants</Link>
             </li>
             <li>
-              <Link href="#">Rules</Link>
+              <Link href="/rules">Rules</Link>
             </li>
             <li>
               <Link href="#">Accomodation</Link>
