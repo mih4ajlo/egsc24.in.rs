@@ -37,3 +37,7 @@
 .btn-blue:hover {
   @apply bg-blue-700;
 }
+
+td, th {
+  padding: 5px 10px;
+}
