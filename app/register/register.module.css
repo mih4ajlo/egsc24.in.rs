@@ -12,7 +12,10 @@
 
 .row input {
     font-size: 1.6rem;
+    padding: 0 5px ;
 }
+
+
 
 
 .row select {

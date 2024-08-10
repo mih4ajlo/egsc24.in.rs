@@ -44,8 +44,8 @@ const bodyJSX = (participants) =>{
 
 const headJSX = (participants) => {
 
-  if (! Array.isArray(participants) ) {
-    return <>no entries</>;
+  if (! Array.isArray(participants) || participants.length ===0) {
+    return <>no participants registered </>;
   }
 
   let tempPar = Object.entries(participants[0])
@@ -65,7 +65,7 @@ const headJSX = (participants) => {
   
 };
 
-const renderTable = (data) => {
+const renderTable = (data = []) => {
 
   
 

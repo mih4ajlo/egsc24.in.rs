@@ -4,7 +4,6 @@ import holPic from "../public/slike/hol.webp";
 import GossSVG from "../public/GoSS_logo.svg";
 
 import trgPic from "../public/slike/trg.webp";
-import centarPic from "../public/slike/centar.jpg";
 import GoPic from "../public/slike/go_tabla.jpg";
 import Link from "next/link";
 import classes from "./header.module.css";
