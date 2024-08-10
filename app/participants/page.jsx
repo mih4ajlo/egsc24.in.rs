@@ -89,7 +89,8 @@ export default function Participants() {
 
     const { data: participants } = await supabase
       .from("main_participants")
-      .select();
+      .select()
+      .limit(50);
 
 
     return renderTable(participants);

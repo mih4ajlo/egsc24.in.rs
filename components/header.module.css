@@ -6,7 +6,7 @@
 .maskOverlap {
     content: url('/slike/go_tabla.jpg');
     position: absolute;
-    opacity: .75;
+    opacity: .85;
     clip-path: circle(9.5dvh at 65% 50%);
     bottom: 0;
     left: -15%;
@@ -107,7 +107,7 @@
   }
   
   .header .menuBtn:checked ~ .menu {
-    max-height: 240px;
+    max-height: 440px;
   }
   
   .header .menuBtn:checked ~ .menuIcon .navicon {

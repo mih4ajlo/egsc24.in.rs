@@ -33,7 +33,7 @@ export default function Menu() {
               <Link href="/rules">Rules</Link>
             </li>
             <li>
-              <Link href="#">Accomodation</Link>
+              <Link href="/details">Other info</Link>
             </li>
             <li>
               <Link href="/nsOpen">NS Open</Link>

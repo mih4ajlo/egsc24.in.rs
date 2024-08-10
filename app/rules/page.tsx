@@ -7,7 +7,7 @@ export default function page() {
     <ul>
       <li className='py-2'>Rules: The tournament consists of five rounds McMahon with Fischer time, 45 minutes basic / 20 seconds per move, komi 6,5 points. Japanese/EGF rules (subject to changes
         depending on the number of participants).</li>
-      <li className='py-2'>Participation: 20€ fee per person. Eligible are all amateur players that are university student and born in 1995 or later with a citizenship of an EGF member-country (<a href="https://www.eurogofed.org/announcement_2002-03-06.html">except</a>). Players
+      <li className='py-2'>Participation: 20€ fee per person. Eligible are all amateur players that are university student and born in 1995 or later with a citizenship of an EGF member-country.  Players
       starting to study in fall 2024 are also eligible but have to show an appropriate university document. Tournament starts on 7 September at 9:30 am.</li>
       <li className='py-2'>Prizes: to be announced</li>
     </ul>

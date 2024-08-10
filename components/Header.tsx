@@ -21,13 +21,13 @@ export default function Header() {
         <div className="relative">
           <Image
             src={trgPic}
-            alt="asd"
+            alt="novi sad square"
             width={800}
             className={`${classes.mask} `}
           />
           <Image
             src={GoPic}
-            alt="asd"
+            alt="hand of player placing go stone"
             width={800}
             className={` ${classes.maskOverlap}`}
           />
