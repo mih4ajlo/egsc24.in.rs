@@ -44,7 +44,7 @@ export default function Header() {
         <p className="mt-4">
           <Link href={"/nsOpen"} className="underline ">
             {" "}
-            Novi Sad Open - 1st edition
+            Novi Sad Open 
           </Link>
         </p>
       </div>

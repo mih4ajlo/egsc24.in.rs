@@ -6,6 +6,7 @@ import classes from '../../register/register.module.css';
 
 const RegisterOpen = () => {
   const [formData, setFormData] = useState({});
+  const [submitedFlag, setSubmitFlag] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -20,10 +21,16 @@ const RegisterOpen = () => {
     e.preventDefault();
     console.log(formData);
 
-    registerForOpen( formData );
+    const res = registerForOpen( formData );
+    setSubmitFlag(res);
+    window.location.href = "/nsOpen/participants";
   };
 
   return (
+    <>
+    
+    {submitedFlag && <div>thank you for registation</div>}
+    {!submitedFlag && (
     <form className=" flex flex-col gap-4 my-8 sm:mx-4 mx-auto"  onSubmit={handleSubmit}>
       <div className={classes.row}>
         <label htmlFor="e_mail">{"E-mail"}</label>
@@ -65,7 +72,7 @@ const RegisterOpen = () => {
           required
         />
       </div>
-      <div className={classes.row}>
+      {/* <div className={classes.row}>
         <label htmlFor="rating">{"Go Rating"}</label>
         <input
           type="text"
@@ -74,7 +81,7 @@ const RegisterOpen = () => {
           onChange={handleChange}
           required
         />
-      </div>
+      </div> */}
       <div className={classes.row}>
         <label htmlFor="Club">{"Club"}</label>
         <input
@@ -96,8 +103,20 @@ const RegisterOpen = () => {
           required
         />
       </div>
-      <button type="submit">Submit</button>
+
+      <div className={classes.row}>
+        <label htmlFor="country">{"Do you need any assistance?"}</label>
+        <textarea
+          id="note"
+          name="note"
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <button className=" btn btn-blue" type="submit">Register</button>
     </form>
+    )}
+      </>
   );
 };
 
