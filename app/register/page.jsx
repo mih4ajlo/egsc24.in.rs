@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { insertData } from "../../utils/supabase/actions";
 import classes from './register.module.css';
+import CategoryButton from '../../components/categoryButton'
 
 const Register = () => {
   const [formData, setFormData] = useState({});
@@ -67,9 +68,7 @@ const Register = () => {
       </div>
       <div className={classes.row}>
         <label htmlFor="category">{"Go Category"}</label>
-        <input
-          type="text"
-          id="category"
+        <CategoryButton
           name="category"
           onChange={handleChange}
           required
