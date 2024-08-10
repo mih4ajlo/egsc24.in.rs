@@ -1,7 +1,7 @@
 import React from "react";
 import { createClient } from "@/utils/supabase/server";
 
-const notToDisplay = ["created_at", "id", "e_mail", "faculty","degree"];
+const notToDisplay = ["created_at", "id", "e_mail", "faculty","degree", "rating"];
 
 const maping = {
   "first_name": "Name", 
@@ -81,8 +81,7 @@ const renderTable = (data) => {
 };
 
 export default function Participants() {
-  let paricArr = [];
-
+  
   const getParticipants = async () => {
     "use server";
 
