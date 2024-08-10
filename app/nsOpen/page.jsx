@@ -13,7 +13,7 @@ export default function NsOpen() {
             participants).
           </li>
           <li className="py-2">
-            Participation: 20€ fee per person. For member of Serbian Go federation 15€ fee per person.  Tournament starts on 7 September at 10:30 am.
+            Participation: 20€ fee per person. For member of Serbian Go federation 15€ per person.  Tournament starts on 7th September at 10:30 am.
           </li>
           <li className="py-2">Prizes: to be announced</li>
         </ul>

@@ -15,7 +15,7 @@ export default function page() {
           that are university student and born in 1995 or later with a
           citizenship of an EGF member-country. Players starting to study in
           fall 2024 are also eligible but have to show an appropriate university
-          document. Tournament starts on 7 September at 9:30 am.
+          document. Tournament starts on 7th September at 9:30 am.
         </li>
         <li className="py-2">Prizes: to be announced</li>
       </ul>
