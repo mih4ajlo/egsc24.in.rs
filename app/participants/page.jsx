@@ -1,7 +1,7 @@
 import React from "react";
 import { createClient } from "@/utils/supabase/server";
 
-const notToDisplay = ["created_at", "id", "e_mail", "faculty","degree", "rating"];
+const notToDisplay = ["created_at", "id", "e_mail", "faculty","degree", "rating","note"];
 
 const maping = {
   "first_name": "Name", 

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { registerForOpen } from "../../../utils/supabase/actions";
+import classes from '../../register/register.module.css';
 
 const RegisterOpen = () => {
   const [formData, setFormData] = useState({});
@@ -23,8 +24,8 @@ const RegisterOpen = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <form className=" flex flex-col gap-4 my-8 sm:mx-4 mx-auto"  onSubmit={handleSubmit}>
+      <div className={classes.row}>
         <label htmlFor="e_mail">{"E-mail"}</label>
         <input
           type="text"
@@ -34,7 +35,7 @@ const RegisterOpen = () => {
           required
         />
       </div>
-      <div>
+      <div className={classes.row}>
         <label htmlFor="first_name">{"First name"}</label>
         <input
           type="text"
@@ -44,7 +45,7 @@ const RegisterOpen = () => {
           required
         />
       </div>
-      <div>
+      <div className={classes.row}>
         <label htmlFor="last_name">{"Last name"}</label>
         <input
           type="text"
@@ -54,7 +55,7 @@ const RegisterOpen = () => {
           required
         />
       </div>
-      <div>
+      <div className={classes.row}>
         <label htmlFor="category">{"Go Category"}</label>
         <input
           type="text"
@@ -64,7 +65,7 @@ const RegisterOpen = () => {
           required
         />
       </div>
-      <div>
+      <div className={classes.row}>
         <label htmlFor="rating">{"Go Rating"}</label>
         <input
           type="text"
@@ -74,7 +75,7 @@ const RegisterOpen = () => {
           required
         />
       </div>
-      <div>
+      <div className={classes.row}>
         <label htmlFor="Club">{"Club"}</label>
         <input
           type="text"
@@ -85,7 +86,7 @@ const RegisterOpen = () => {
         />
       </div>
       
-      <div>
+      <div className={classes.row}>
         <label htmlFor="country">{"Country"}</label>
         <input
           type="text"

@@ -106,7 +106,7 @@ const Register = () => {
         />
       </div>
       <div className={classes.row }>
-        <label htmlFor="level_of_studies">{"Level of studies"}</label>
+        <label htmlFor="level_of_studies">{"Studies level"}</label>
         <select
           id="level_of_studies"
           name="degree"
@@ -128,7 +128,17 @@ const Register = () => {
           required
         />
       </div>
-      <button className=" btn btn-blue" type="submit">Submit</button>
+
+      <div className={classes.row}>
+        <label htmlFor="country">{"Do you need any assistance?"}</label>
+        <textarea
+          id="note"
+          name="note"
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <button className=" btn btn-blue" type="submit">Register</button>
     </form>
     )}
     </>
