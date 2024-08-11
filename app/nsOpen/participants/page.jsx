@@ -8,6 +8,7 @@ const maping = {
   "last_name":"Last name",
   "category":"Category",
   "rating":"Rating",
+  "club":"Club",
   "country":"Country"
 }
 
