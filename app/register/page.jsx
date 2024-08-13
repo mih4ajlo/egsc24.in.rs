@@ -70,7 +70,7 @@ const Register = () => {
         <label htmlFor="category">{"Go Category"}</label>
         <CategoryButton
           name="category"
-          onChange={handleChange}
+          handleChange={handleChange}
           required
         />
       </div>
