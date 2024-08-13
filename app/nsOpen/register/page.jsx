@@ -1,13 +1,16 @@
-"use client";
+ "use client";
 
 import React, { useState } from "react";
 import { registerForOpen } from "../../../utils/supabase/actions";
 import classes from '../../register/register.module.css';
 import CategoryButton from '../../../components/categoryButton'
 
+
+
 const RegisterOpen = () => {
   const [formData, setFormData] = useState({});
   const [submitedFlag, setSubmitFlag] = useState(false);
+ 
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;

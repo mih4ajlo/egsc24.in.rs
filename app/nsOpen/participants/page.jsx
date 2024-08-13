@@ -1,6 +1,14 @@
 import React from "react";
 import { createClient } from "@/utils/supabase/server";
 
+
+
+export async function generateMetadata({ params }) {
+  return {
+    title: 'Novi sad Open | Participants',
+  }
+}
+
 const notToDisplay = ["created_at", "id", "e_mail",  "rating","note"];
 
 const maping = {
@@ -82,6 +90,8 @@ const renderTable = (data = []) => {
     </>
   );
 };
+
+
 
 export default function Participants() {
   

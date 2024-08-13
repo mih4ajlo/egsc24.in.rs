@@ -1,6 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 
+
+export async function generateMetadata({ params }) {
+  return {
+    title: 'Novi sad Open ',
+    description: 'Novi sad open, 7th - 8th of September',
+  }
+}
+
+
 export default function NsOpen() {
   return (
     <>
