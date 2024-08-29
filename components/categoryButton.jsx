@@ -31,6 +31,7 @@ export default function categoryButton({name, handleChange}) {
       <option value="4D">4D</option>
       <option value="5D">5D</option>
       <option value="6D">6D</option>
+      <option value="7D">7D</option>
     </select>
   );
 }
