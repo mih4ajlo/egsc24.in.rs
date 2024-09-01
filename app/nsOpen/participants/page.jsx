@@ -83,9 +83,9 @@ const renderTable = (data = []) => {
   return (
     <>
       
-    <table>
+    <table >
       <thead>{headJ}</thead>
-      <tbody>{bodJ}</tbody>
+      <tbody >{bodJ}</tbody>
     </table>
     </>
   );
@@ -114,5 +114,5 @@ export default function Participants() {
 
 
 
-  return <div>{(resp)}</div>;
+  return <div className="overflow-x-auto max-w-[95%]">{(resp)}</div>;
 }

@@ -17,7 +17,12 @@ export default function page() {
           fall 2024 are also eligible but have to show an appropriate university
           document. Tournament starts on 7th September at 9:30 am.
         </li>
-        <li className="py-2">Prizes: to be announced</li>
+        <li className="py-2">Prizes: 
+
+          <p className="ml-8">
+            I place : 100 eur <br/> II place: 50 eur <br/> III place: 30 eur  
+          </p>
+        </li>
       </ul>
     </div>
   );

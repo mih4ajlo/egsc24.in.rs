@@ -1,7 +1,7 @@
 import React from "react";
 import { createClient } from "@/utils/supabase/server";
 
-const notToDisplay = ["created_at", "id", "e_mail", "faculty","degree", "rating","note"];
+const notToDisplay = ["created_at", "id", "e_mail", "faculty","degree", "note"];
 
 const maping = {
   "first_name": "Name", 
@@ -44,8 +44,8 @@ const bodyJSX = (participants) =>{
 
 const headJSX = (participants) => {
 
-  if (! Array.isArray(participants) || participants.length ===0) {
-    return <>no participants registered </>;
+  if (! Array.isArray(participants) ) {
+    return <>no entries</>;
   }
 
   let tempPar = Object.entries(participants[0])
@@ -56,7 +56,7 @@ const headJSX = (participants) => {
       <tr>
         {tempPar.map(
           (el, i) => {
-            if(el[0]==='#')return <th>#</th>;
+            if(el[0]==='#')return <th>  #</th>;
             return notToDisplay.indexOf(el[0]) == -1 ? (<th>{ maping[el[0]] }</th>) : null
           }
         )}
@@ -65,7 +65,7 @@ const headJSX = (participants) => {
   
 };
 
-const renderTable = (data = []) => {
+const renderTable = (data) => {
 
   
 
@@ -73,7 +73,7 @@ const renderTable = (data = []) => {
   let bodJ =  bodyJSX(data);
 
   return (
-    <table>
+    <table >
       <thead>{headJ}</thead>
       <tbody>{bodJ}</tbody>
     </table>
@@ -81,7 +81,8 @@ const renderTable = (data = []) => {
 };
 
 export default function Participants() {
-  
+  let paricArr = [];
+
   const getParticipants = async () => {
     "use server";
 
@@ -89,8 +90,7 @@ export default function Participants() {
 
     const { data: participants } = await supabase
       .from("main_participants")
-      .select()
-      .limit(50);
+      .select();
 
 
     return renderTable(participants);
@@ -101,5 +101,5 @@ export default function Participants() {
 
 
 
-  return <div>{(resp)}</div>;
+  return <div className="overflow-x-auto max-w-[95%]">{(resp)}</div>;
 }
